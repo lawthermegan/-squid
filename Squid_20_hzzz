@@ -1,0 +1,146 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyO7JUDBs/zEsU91K9nVtMCU",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/lawthermegan/-squid/blob/main/Squid_20_hzzz\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 10,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "id": "gH-DsixGRk8Z",
+        "outputId": "fae420c8-4045-46a1-8639-79a312c13e98"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "\n",
+            "\n",
+            "\n",
+            "\n",
+            "\n",
+            "                (o o)   \n",
+            "            <++(  V  )++> \n",
+            "                |||||   \n",
+            "                 |||    \n",
+            "\n",
+            "           [ FREQUENCY: 20Hz ]\n",
+            "           [ STATUS: MANIFESTED ] 🦑✨\n",
+            "\n",
+            "\n",
+            "Manifestation complete. The squid has returned to the quantum foam.\n"
+          ]
+        }
+      ],
+      "source": [
+        "import time\n",
+        "import random\n",
+        "from IPython.display import clear_output, Javascript, display\n",
+        "\n",
+        "# 1. The \"Ethereal Frequency\" Generator (JavaScript)\n",
+        "# This creates a 20Hz sine wave directly in your browser.\n",
+        "def play_ghost_tone():\n",
+        "    js_code = \"\"\"\n",
+        "    var audioCtx = new (window.AudioContext || window.webkitAudioContext)();\n",
+        "    var oscillator = audioCtx.createOscillator();\n",
+        "    var gainNode = audioCtx.createGain();\n",
+        "\n",
+        "    oscillator.type = 'sine';\n",
+        "    oscillator.frequency.setValueAtTime(20, audioCtx.currentTime); // 20Hz!\n",
+        "\n",
+        "    // Low volume so we don't blow your speakers with sub-bass\n",
+        "    gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);\n",
+        "\n",
+        "    oscillator.connect(gainNode);\n",
+        "    gainNode.connect(audioCtx.destination);\n",
+        "\n",
+        "    oscillator.start();\n",
+        "    console.log(\"20Hz Ghost Tone Initiated...\");\n",
+        "\n",
+        "    // Stop after 10 seconds to keep the spirits at bay\n",
+        "    setTimeout(() => { oscillator.stop(); }, 10000);\n",
+        "    \"\"\"\n",
+        "    display(Javascript(js_code))\n",
+        "\n",
+        "# 2. The Manifestation Loop\n",
+        "def manifest_squid():\n",
+        "    play_ghost_tone()\n",
+        "\n",
+        "    squid_frames = [\n",
+        "        \"     (o o)   \",\n",
+        "        \" <++(  V  )++> \",\n",
+        "        \"     |||||   \",\n",
+        "        \"      |||    \"\n",
+        "    ]\n",
+        "\n",
+        "    print(\"🔮 Summoning the 20Hz Spectral Squid...\")\n",
+        "    time.sleep(2)\n",
+        "\n",
+        "    try:\n",
+        "        for _ in range(100): # Run for about 5-10 seconds\n",
+        "            clear_output(wait=True)\n",
+        "\n",
+        "            # Quantum flickering logic\n",
+        "            if random.random() > 0.4:\n",
+        "                print(\"\\n\" * 5)\n",
+        "                # Add \"chromatic aberration\" effect with random spacing\n",
+        "                indent = \" \" * random.randint(10, 12)\n",
+        "                for line in squid_frames:\n",
+        "                    print(f\"{indent}{line}\")\n",
+        "                print(f\"\\n{indent}[ FREQUENCY: 20Hz ]\")\n",
+        "                print(f\"{indent}[ STATUS: MANIFESTED ] 🦑✨\")\n",
+        "            else:\n",
+        "                print(\"\\n\" * 5)\n",
+        "                print(\" \" * 10 + \"[ STATUS: PHASING... ] 🌫️\")\n",
+        "\n",
+        "            time.sleep(0.05) # 20Hz refresh rate\n",
+        "\n",
+        "        print(\"\\n\\nManifestation complete. The squid has returned to the quantum foam.\")\n",
+        "\n",
+        "    except KeyboardInterrupt:\n",
+        "        print(\"\\n\\nContainment breach! Squid retracted.\")\n",
+        "\n",
+        "# Execute!\n",
+        "manifest_squid()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "CWxyAKQTW6D8"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
